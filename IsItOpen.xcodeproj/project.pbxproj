@@ -19,6 +19,11 @@
 		D29D4F9018AE2EE200B92B89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29D4F7818AE2EE200B92B89 /* UIKit.framework */; };
 		D29D4F9818AE2EE200B92B89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D29D4F9618AE2EE200B92B89 /* InfoPlist.strings */; };
 		D29D4F9A18AE2EE200B92B89 /* IsItOpenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D29D4F9918AE2EE200B92B89 /* IsItOpenTests.m */; };
+		D29D4FA818AE2FA700B92B89 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D29D4FA718AE2FA700B92B89 /* MainStoryboard.storyboard */; };
+		D29D4FAB18AE310C00B92B89 /* PlaceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29D4FAA18AE310C00B92B89 /* PlaceListViewController.m */; };
+		D29D4FAE18AE313800B92B89 /* PlaceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29D4FAD18AE313800B92B89 /* PlaceDetailViewController.m */; };
+		D29D4FB518B0AC4300B92B89 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = D29D4FB418B0AC4300B92B89 /* Place.m */; };
+		D29D4FB818B0AD4400B92B89 /* Places.m in Sources */ = {isa = PBXBuildFile; fileRef = D29D4FB718B0AD4400B92B89 /* Places.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,15 @@
 		D29D4F9518AE2EE200B92B89 /* IsItOpenTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IsItOpenTests-Info.plist"; sourceTree = "<group>"; };
 		D29D4F9718AE2EE200B92B89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D29D4F9918AE2EE200B92B89 /* IsItOpenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IsItOpenTests.m; sourceTree = "<group>"; };
+		D29D4FA718AE2FA700B92B89 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		D29D4FA918AE310C00B92B89 /* PlaceListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceListViewController.h; sourceTree = "<group>"; };
+		D29D4FAA18AE310C00B92B89 /* PlaceListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceListViewController.m; sourceTree = "<group>"; };
+		D29D4FAC18AE313800B92B89 /* PlaceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceDetailViewController.h; sourceTree = "<group>"; };
+		D29D4FAD18AE313800B92B89 /* PlaceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceDetailViewController.m; sourceTree = "<group>"; };
+		D29D4FB318B0AC4300B92B89 /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Place.h; sourceTree = "<group>"; };
+		D29D4FB418B0AC4300B92B89 /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Place.m; sourceTree = "<group>"; };
+		D29D4FB618B0AD4400B92B89 /* Places.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Places.h; sourceTree = "<group>"; };
+		D29D4FB718B0AD4400B92B89 /* Places.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Places.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +121,12 @@
 		D29D4F7A18AE2EE200B92B89 /* IsItOpen */ = {
 			isa = PBXGroup;
 			children = (
+				D29D4FA618AE2F6700B92B89 /* Assets */,
+				D29D4FA318AE2F4900B92B89 /* Models */,
+				D29D4FA418AE2F5000B92B89 /* Views */,
+				D29D4FA518AE2F5400B92B89 /* Controllers */,
 				D29D4F8318AE2EE200B92B89 /* AppDelegate.h */,
 				D29D4F8418AE2EE200B92B89 /* AppDelegate.m */,
-				D29D4F8618AE2EE200B92B89 /* Images.xcassets */,
 				D29D4F7B18AE2EE200B92B89 /* Supporting Files */,
 			);
 			path = IsItOpen;
@@ -142,6 +159,52 @@
 				D29D4F9618AE2EE200B92B89 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D29D4FA318AE2F4900B92B89 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D29D4FB618B0AD4400B92B89 /* Places.h */,
+				D29D4FB718B0AD4400B92B89 /* Places.m */,
+				D29D4FB318B0AC4300B92B89 /* Place.h */,
+				D29D4FB418B0AC4300B92B89 /* Place.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D29D4FA418AE2F5000B92B89 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D29D4FA718AE2FA700B92B89 /* MainStoryboard.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D29D4FA518AE2F5400B92B89 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D29D4FAF18AE313F00B92B89 /* Place */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D29D4FA618AE2F6700B92B89 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D29D4F8618AE2EE200B92B89 /* Images.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		D29D4FAF18AE313F00B92B89 /* Place */ = {
+			isa = PBXGroup;
+			children = (
+				D29D4FA918AE310C00B92B89 /* PlaceListViewController.h */,
+				D29D4FAA18AE310C00B92B89 /* PlaceListViewController.m */,
+				D29D4FAC18AE313800B92B89 /* PlaceDetailViewController.h */,
+				D29D4FAD18AE313800B92B89 /* PlaceDetailViewController.m */,
+			);
+			name = Place;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D29D4FA818AE2FA700B92B89 /* MainStoryboard.storyboard in Resources */,
 				D29D4F7F18AE2EE200B92B89 /* InfoPlist.strings in Resources */,
 				D29D4F8718AE2EE200B92B89 /* Images.xcassets in Resources */,
 			);
@@ -239,8 +303,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D29D4FB818B0AD4400B92B89 /* Places.m in Sources */,
 				D29D4F8518AE2EE200B92B89 /* AppDelegate.m in Sources */,
+				D29D4FAE18AE313800B92B89 /* PlaceDetailViewController.m in Sources */,
 				D29D4F8118AE2EE200B92B89 /* main.m in Sources */,
+				D29D4FB518B0AC4300B92B89 /* Place.m in Sources */,
+				D29D4FAB18AE310C00B92B89 /* PlaceListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
