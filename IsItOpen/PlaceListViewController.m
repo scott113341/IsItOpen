@@ -30,6 +30,8 @@
     
     // set UITableViewDataSource
     self.placeListTableView.dataSource = self.places;
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:nil action:nil];
 }
 
 -(void)refresh
