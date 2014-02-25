@@ -22,7 +22,7 @@
     
     self.places = [Places sharedInstance];
     
-    // add pull to refresh control
+    // add UIRefreshControl
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
     refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refreshing"];
@@ -33,6 +33,7 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:nil action:nil];
 }
+
 
 -(void)refresh
 {
@@ -47,7 +48,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UIStoryboard *storyboard = self.storyboard;
-    PlaceDetailViewController *placeDetailVC = [storyboard instantiateViewControllerWithIdentifier:@"PlaceDetailViewController"];
+    PlaceDetailViewController *placeDetailVC = [storyboard instantiateViewControllerWithIdentifier:@"placeDetailViewController"];
     
     placeDetailVC.title = [self.places placeAtIndex:[indexPath row]].name;
     

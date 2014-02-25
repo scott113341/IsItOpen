@@ -14,6 +14,4 @@
 
 @implementation PlaceDetailViewController
 
-
-
 @end

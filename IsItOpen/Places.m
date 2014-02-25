@@ -18,8 +18,11 @@
         [self.all addObject:[[Place alloc] initPlaceWithName:@"Meow City"
                                                    andStatus:0]];
         
-        [self.all addObject:[[Place alloc] initPlaceWithName:@"Poop Zone"
+        [self.all addObject:[[Place alloc] initPlaceWithName:@"The Pwn Zone"
                                                    andStatus:1]];
+        
+        [self.all addObject:[[Place alloc] initPlaceWithName:@"Some Other Place"
+                                                   andStatus:2]];
 
     }
     return self;
@@ -52,8 +55,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *cellID = @"placeCell";
-    UITableViewCell *newCell;
-    newCell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    UITableViewCell *newCell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (!newCell) {
         newCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
     }
@@ -62,7 +64,17 @@
     
     newCell.textLabel.text = place.name;
     newCell.detailTextLabel.text = [place statusName];
+    newCell.detailTextLabel.textColor = [place statusColor];
     newCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    
+    UIView *statusBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, newCell.indentationWidth, tableView.rowHeight)];
+    statusBar.backgroundColor = [place statusColor];
+    [newCell.contentView addSubview:statusBar];
+    
+    
+    //newCell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Stars"]];
+    //newCell.imageView.image = [UIImage imageNamed:@"Stars"];
     
     return newCell;
 }

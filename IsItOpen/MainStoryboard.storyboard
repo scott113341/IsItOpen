@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B3116" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6dS-y6-q2S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B3116" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="lDz-Mo-kZO">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -7,7 +7,7 @@
         <!--Place List View Controller - Is It Open?-->
         <scene sceneID="Olf-zf-bSR">
             <objects>
-                <tableViewController storyboardIdentifier="PlaceListViewController" id="f2q-0E-LC4" customClass="PlaceListViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="placeListViewController" id="f2q-0E-LC4" customClass="PlaceListViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="j3G-Xg-0fV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,7 +42,7 @@
         <!--Place Detail View Controller-->
         <scene sceneID="hre-9x-uYG">
             <objects>
-                <viewController storyboardIdentifier="PlaceDetailViewController" id="vJh-16-eVH" customClass="PlaceDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="placeDetailViewController" id="vJh-16-eVH" customClass="PlaceDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="G3o-pn-yHF"/>
                         <viewControllerLayoutGuide type="bottom" id="wgf-iN-DvV"/>
@@ -61,10 +61,14 @@
         <!--Navigation Controller-->
         <scene sceneID="eBv-lV-Okw">
             <objects>
-                <navigationController definesPresentationContext="YES" id="6dS-y6-q2S" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="rootNavigationController" definesPresentationContext="YES" id="6dS-y6-q2S" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rUH-cF-Z7F">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="EuE-L2-N5c">
+                        <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="f2q-0E-LC4" kind="relationship" relationship="rootViewController" id="Yep-Ui-NdQ"/>
                     </connections>
@@ -72,6 +76,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uTE-4t-r9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-140" y="-38"/>
+        </scene>
+        <!--Side Menu Root View Controller-->
+        <scene sceneID="0F6-6e-PnX">
+            <objects>
+                <viewController id="lDz-Mo-kZO" customClass="SideMenuRootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xTq-p4-VBV"/>
+                        <viewControllerLayoutGuide type="bottom" id="V35-Qc-g7L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eA8-ii-bJU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L78-Ox-Fx1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-140" y="718"/>
+        </scene>
+        <!--Side Menu View Controller-->
+        <scene sceneID="sVG-yo-lXk">
+            <objects>
+                <viewController storyboardIdentifier="sideMenuViewController" id="tVp-fv-O6u" customClass="SideMenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PF3-fq-fAf"/>
+                        <viewControllerLayoutGuide type="bottom" id="X1h-xZ-ypn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qIk-x1-Ic7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vD7-gv-TZu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="277" y="718"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

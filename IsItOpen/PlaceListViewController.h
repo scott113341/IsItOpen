@@ -17,4 +17,6 @@
 
 @property (strong) Places *places;
 
+-(void)refresh;
+
 @end

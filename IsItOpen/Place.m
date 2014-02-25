@@ -7,6 +7,7 @@
 //
 
 #import "Place.h"
+#import "UIColor+Hex.h"
 
 @implementation Place
 
@@ -26,6 +27,15 @@
     if (status == 0) return @"Closed";
     if (status == 1) return @"Open";
     else return @"Meow";
+}
+
+-(UIColor *)statusColor
+{
+    NSInteger status = self.status;
+    
+    if (status == 0) return [UIColor redColor];
+    if (status == 1) return [UIColor colorWithHex:@"#00B346"];
+    else return [UIColor colorWithHex:@"#D5DB16"];
 }
 
 @end

@@ -17,5 +17,6 @@
          andStatus:(NSInteger)status;
 
 -(NSString *)statusName;
+-(UIColor *)statusColor;
 
 @end
